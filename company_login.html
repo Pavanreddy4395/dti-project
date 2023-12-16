@@ -1,98 +1,179 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Login</title>
-    <style>
-        body{
-            background: url(ffllpp.jpg);
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: 100% 100%;
-        }
-        h1{
-            font-weight: bold;
-        }
-        /* hello */
-        header ul{
-            display: flex;
-            justify-content: left;
-        }
-        header li
-        {
-            margin-right: 20px;
-            margin-left: 20px;
-            list-style: none;
-            font-weight: bold;
-            font-size: 20px;
-        }
-        ul a{
-            text-decoration: none;
-            color:white;
-        }
-        ul a:hover{
-            color: lightgreen;
-        }
-        form{
-            color:rgb(94, 10, 10);
-            padding: 5px;
-            margin-left: 35%;
-            margin-right: 35%;
-            border: 10px white;
-            /* border-style: solid; */
-            border: 2px solid rgb(16, 57, 81);
-        }
-        form fieldset
-        {
-            width: 1200px;
-            height: 600px;
-            padding-left: 700px;
-            padding-top: 300px;
-        }
-        form label{
-            font-size: 50px;
-            padding-left: 15px;
-            color:white;
-        }
-        form input{
-            background:white;
-        }
-        
-    </style>
-</head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html" style="color: lightgreen;">Home</a></li>
-                <li><a href="personal_login.html">Personal-login</a></li>
-                <li><a href="company_login.html">Company-login</a></li>
-            </ul>
-        </nav>
-    </header>
-    <center><h1>Company-Login</h1></center>
-    <form>
-        <label>Enter your full name</label><br>
-        <input type="text" name="name"><br>
-        <label>Enter the company name</label><br>
-        <input type="text" name="companyname"><br>
-        <label>Enter your email</label><br>
-        <input type="email" name="email"><br>
-        <br>Enter your Address:<br>
-        <textarea></textarea><br>
-        <label>Type of waste:</label><br>
-        <input type="checkbox" name="plasticbottles">
-        <label for="plasticbottles">Plastic Bottles</label><br>
-        <input type="checkbox" name="wrappers">
-        <label for="wrappers">Wrappers</label><br>
-        <input type="checkbox" name="oil cans">
-        <label for="oil cans">Oil cans</label>
-        <input type="checkbox" name="others">
-        <label for="others">others</label>
-
-       <br> <input type="submit" value="sign-up">
-       <button><a href="personal_login.html">Personal-Login</a></button>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url(https://th.bing.com/th/id/OIP.6xIJSsZmkgnIH7PItahjAwHaEo?rs=1&pid=ImgDetMain.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  section {
+      position: relative;
+      max-width: 500px;
+      background-color: transparent;
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      border-radius: 40px;
+      backdrop-filter: blur(55px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 3rem;
+  }
+  
+  h1 {
+      font-size: 2rem;
+      color: #fff;
+      text-align: center;
+  }
+  
+  .inputbox {
+      position: relative;
+      margin: 30px 0;
+      max-width: 310px;
+      border-bottom: 2px solid #fff;
+  }
+  
+  .inputbox label {
+      position: absolute;
+      top: 50%;
+      left: 5px;
+      transform: translateY(-50%);
+      color: #fff;
+      font-size: 1rem;
+      pointer-events: none;
+      transition: all 0.5s ease-in-out;
+  }
+  
+  input:focus ~ label, 
+  input:valid ~ label {
+      top: -5px;
+  }
+  
+  .inputbox input {
+      width: 100%;
+      height: 60px;
+      background: transparent;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      padding: 0 35px 0 5px;
+      color: #fff;
+  }
+  
+  .inputbox ion-icon {
+      position: absolute;
+      right: 9px;
+      color: #fff;
+      font-size: 1.2rem;
+      top: 20px;
+  }
+  
+  .forget {
+      margin: 45px 0;
+      font-size: 0.85rem;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+   
+  }
+  
+  .forget label {
+      display: flex;
+      align-items: center;
+  }
+  
+  .forget label input {
+      margin-right: 3px;
+  }
+  
+  .forget a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+  }
+  
+  .forget a:hover {
+      text-decoration: underline;
+  }
+  
+  button {
+      width: 100%;
+      height: 40px;
+      border-radius: 40px;
+      background-color: rgb(255, 255,255, 1);
+      border: none;
+      outline: none;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: all 0.4s ease;
+  }
+  
+  button:hover {
+    background-color: rgb(255, 255,255, 0.5);
+  }
+  
+  .register {
+      font-size: 0.9rem;
+      color: #fff;
+      text-align: center;
+      margin: 25px 0 10px;
+  }
+  
+  .register p a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+  }
+  .register p a:hover {
+      text-decoration: underline;
+  }
+  </style>
+  <header>
+    <nav>
+        <ul>
+            <li><a href="index.html" style="color:rgb(75, 170, 75);"></a></li>
+            <li><a href="personal_login.html"></a></li>
+            <li><a href="company_login.html"></a></li>
+        </ul>
+    </nav>
+</header>
+    <section>
+        <form>
+            <h1>Login</h1>
+            <div class="inputbox">
+              <input type="text" required>
+              <label for="">company name</label>
+          </div>
+            <div class="inputbox">
+                <input type="type" required>
+                <label for="">Email</label>
+            </div>
+            <div class="inputbox">
+                <input type="number" required>
+                <label for="">moblie number</label>
+            </div>
+          </div>
+          <div class="inputbox">
+              <input type="type" required>
+              <label for="">Address</label>
+          </div>
+          <div class="inputbox">
+            <input type="type" required>
+            <label for="">Type of plastic:</label>
+        </div>
+            <button>Log in</button>
         </form>
-</body>
-</html>
+    </section>
+  </body>
